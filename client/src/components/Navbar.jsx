@@ -16,7 +16,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 
 const pages = ["Home", "Vehicles", "Guidelines", "About Us"];
 
-function Navbar() {
+export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -128,4 +128,4 @@ function Navbar() {
     </AppBar>
   );
 }
-export default Navbar;
+
