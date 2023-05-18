@@ -1,4 +1,5 @@
 import * as React from "react";
+import {Link} from 'react-router-dom'
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -85,7 +86,7 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center"><Link style={{textDecoration:"none", color:"black"}} to={`/${page}`}>{page}</Link></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -111,13 +112,15 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
+              <Link style={{textDecoration:"none"}} to={`/${page}`}><Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "gold", display: "block" }}
               >
                 {page}
-              </Button>
+                </Button>
+                </Link>
+            
             ))}
           </Box>
         </Toolbar>
