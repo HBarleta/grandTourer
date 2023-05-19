@@ -9,7 +9,7 @@ import { vehicles } from "../constants/info";
 
 const VehicleCard=({vehicle})=>(
 <Paper elevation={11}>
-      <Card sx={{ Width: "100rem" }}>
+      <Card sx={{ Width: "100rem", backgroundColor:"#272727", color:"gold" }}>
         <CardMedia
           sx={{ width:"100vw",height: "100vh" }}
           image={vehicle.image}
@@ -25,7 +25,7 @@ const VehicleCard=({vehicle})=>(
           <Typography gutterBottom variant="h5" component="div" alignCenter>
             {vehicle.title}
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1">
             {vehicle.description}
           </Typography>
         </CardContent>
