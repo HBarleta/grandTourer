@@ -14,7 +14,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
-const pages = ["Home", "Vehicles", "Guidelines", "About Us"];
+const pages = ["Home", "Vehicles", "Guidelines", "AboutUs"];
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -31,7 +31,7 @@ export default function Navbar() {
     <AppBar
       position="static"
       sx={{
-        background: "black",
+        background: "#272727",
       }}
     >
       <Container maxWidth="xl">
