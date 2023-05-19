@@ -3,6 +3,8 @@ import Vehicle from "../components/Vehicle";
 
 export default function Vehicles(){
   return (
-       <Vehicle/>
+   <Vehicle/>
+      
+    
   )
 }
