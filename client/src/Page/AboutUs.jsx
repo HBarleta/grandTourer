@@ -29,9 +29,9 @@ export default function AboutUs() {
           sx={{
             display: "grid",
             margin: "auto",
-            gap: 3,
+            gap: 5,
             gridTemplateColumns: "repeat(2, 1fr)",
-            width: "50rem",
+            width: "80%",
             paddingY: 2,
           }}
         >
