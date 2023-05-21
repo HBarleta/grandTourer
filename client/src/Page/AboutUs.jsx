@@ -16,25 +16,30 @@ export default function AboutUs() {
         backgroundColor: "#272727",
         width: "100vw",
         height: "100vh",
-        paddingTop: "25%",
+        borderTop: 1,
+        borderColor: "green",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent:"center"
+
       }}
     >
-      <Paper
-        sx={{
-          boxShadow:
-            "0px 7px 8px -4px rgb(255 255 255 / 20%), 0px 12px 17px 2px rgb(255 255 255 / 14%), 0px 5px 22px 4px rgb(255 255 255 / 12%)",
-        }}
-      >
-        <Box
+     {/* This component wraps the picture and Aboutus content */}
+        <Paper
           sx={{
             display: "grid",
             margin: "auto",
             gap: 5,
             gridTemplateColumns: "repeat(2, 1fr)",
             width: "80%",
-            paddingY: 2,
+            padding: 5,
+            border: 1,
+            borderColor: "red",
+            backgroundColor: "silver"
+            
           }}
         >
+          {/* box component to hold picture */}
           <Box>
             <img
               src="https://placekitten.com/g/500/400"
@@ -42,13 +47,14 @@ export default function AboutUs() {
               style={{ borderRadius: "10px" }}
             />
           </Box>
-          <Box>
+          {/* box component to hold aboutus content */}
+          <Paper elevation={11} sx={{backgroundColor: "#272727",  border: "2px solid white",}}>
             <Card
               sx={{
                 Width: "100rem",
-                backgroundColor: "#272727",
+                backgroundColor: "inherit",
                 color: "gold",
-                border: "2px solid white",
+               
               }}
             >
               <CardContent>
@@ -65,12 +71,16 @@ export default function AboutUs() {
                   Neque beatae eligendi facilis ipsam impedit maiores eos
                   repudiandae distinctio vel sint voluptates, necessitatibus
                   repellendus eum aperiam modi delectus natus eaque repellat?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Neque beatae eligendi facilis ipsam impedit maiores eos
+                  repudiandae distinctio vel sint voluptates, necessitatibus
+                  repellendus eum aperiam modi delectus natus eaque repellat?
                 </Typography>
               </CardContent>
             </Card>
-          </Box>
-        </Box>
-      </Paper>
+          </Paper>
+        </Paper>
+      
     </Box>
   );
 }
