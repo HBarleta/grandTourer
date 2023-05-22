@@ -8,79 +8,60 @@ import Box from "@mui/material/Box";
 import corolla from "../static/Pasi-Corolla-Hybrid.jpg";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
+import Grid from "@mui/material/Grid";
 
 export default function AboutUs() {
   return (
     <Box
       sx={{
         backgroundColor: "#272727",
-        width: "100vw",
+        alignItems: "center",
         height: "100vh",
-        borderTop: 1,
+        border: 1,
         borderColor: "green",
         display: "flex",
-        flexDirection: "column",
-        justifyContent:"center"
-
       }}
     >
-     {/* This component wraps the picture and Aboutus content */}
-        <Paper
-          sx={{
-            display: "grid",
-            margin: "auto",
-            gap: 5,
-            gridTemplateColumns: "repeat(2, 1fr)",
-            width: "80%",
-            padding: 5,
-            border: 1,
-            borderColor: "red",
-            backgroundColor: "silver"
-            
-          }}
+      <Grid container alignItems={"center"} justifyContent={"space-around"}>
+        {/* This component wraps the picture and Aboutus content */}
+
+        {/* box component to hold picture */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          sx={{ border: 1, borderColor: "white" }}
         >
-          {/* box component to hold picture */}
-          <Box>
-            <img
-              src="https://placekitten.com/g/500/400"
-              alt="Profile-Pic"
-              style={{ borderRadius: "10px" }}
-            />
-          </Box>
-          {/* box component to hold aboutus content */}
-          <Paper elevation={11} sx={{backgroundColor: "#272727",  border: "2px solid white",}}>
-            <Card
-              sx={{
-                Width: "100rem",
-                backgroundColor: "inherit",
-                color: "gold",
-               
-              }}
-            >
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  alignCenter
-                >
-                  About Grand Tourer
-                </Typography>
-                <Typography variant="body1">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Neque beatae eligendi facilis ipsam impedit maiores eos
-                  repudiandae distinctio vel sint voluptates, necessitatibus
-                  repellendus eum aperiam modi delectus natus eaque repellat?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Neque beatae eligendi facilis ipsam impedit maiores eos
-                  repudiandae distinctio vel sint voluptates, necessitatibus
-                  repellendus eum aperiam modi delectus natus eaque repellat?
-                </Typography>
-              </CardContent>
-            </Card>
-          </Paper>
-        </Paper>
-      
+          <img
+            srcSet="https://placekitten.com/g/500/400 1200w"
+            alt="Grand Tourer logo"
+            style={{ borderRadius: "10px" }}
+          />
+        </Grid>
+        {/* box component to hold aboutus content */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          sx={{ border: 1, borderColor: "white", padding: 1 }}
+        >
+          <Typography gutterBottom variant="h5" color="white">
+            About Grand Tourer
+          </Typography>
+          <Typography variant="body1" color="white" fontSize="1em">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
+            beatae eligendi facilis ipsam impedit maiores eos repudiandae
+            distinctio vel sint voluptates, necessitatibus repellendus eum
+            aperiam modi delectus natus eaque repellat? Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Neque beatae eligendi facilis
+            ipsam impedit maiores eos repudiandae distinctio vel sint
+            voluptates, necessitatibus repellendus eum aperiam modi delectus
+            natus eaque repellat?
+          </Typography>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

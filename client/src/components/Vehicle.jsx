@@ -6,16 +6,15 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import corolla from "../static/Pasi-Corolla-Hybrid.jpg";
 import { vehicles } from "../constants/info";
-
+import Box from "@mui/material/Box";
 const VehicleCard = ({ vehicle }) => (
   <Paper elevation={11}>
+    <Box
+      component="img"
+      srcSet={vehicle.image}
+      alt="2023 Toyota Corolla Hybird"
+    />
     <Card sx={{ Width: "100rem", backgroundColor: "#272727", color: "gold" }}>
-      <CardMedia
-        sx={{ width: "100vw", height: "100vh" }}
-        image={`${vehicle.image}`}
-        title="Homepage Cover Photo"
-      />
-
       <CardContent
         sx={{
           marginY: 35,
