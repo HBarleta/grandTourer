@@ -12,6 +12,7 @@ import Grid from "@mui/material/Grid";
 
 export default function AboutUs() {
   return (
+    // component to hold background and grid items
     <Box
       sx={{
         backgroundColor: "#272727",
@@ -22,10 +23,9 @@ export default function AboutUs() {
         display: "flex",
       }}
     >
+      {/* grid item component holding content and image */}
       <Grid container alignItems={"center"} justifyContent={"space-around"}>
-        {/* This component wraps the picture and Aboutus content */}
-
-        {/* box component to hold picture */}
+        {/* grid component to hold picture */}
         <Grid
           item
           xs={12}
@@ -39,7 +39,7 @@ export default function AboutUs() {
             style={{ borderRadius: "10px" }}
           />
         </Grid>
-        {/* box component to hold aboutus content */}
+        {/* grid item component to hold aboutus content */}
         <Grid
           item
           xs={12}
